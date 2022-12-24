@@ -53,12 +53,9 @@ h1, h2, h3 {
   display: inline-block;
 }
 
-.box.left {
-  float: left;
-}
-
 .box.right {
   float: right;
+  margin-left: 1rem;
 }
 
 .box.full {
@@ -79,7 +76,7 @@ h1, h2, h3 {
 
 a {
   color: #f73939;
-  text-underline: #f73939 underline;
+  text-decoration: #f73939 underline;
 }
 
 a:hover {
@@ -96,6 +93,60 @@ a:hover {
   color: white;
 }
 
-.box-content > img {
+.box-content > div > img {
   width: 100%;
+}
+
+.box-content > div {
+  display: none;
+}
+
+.box-content > div.short, .box-content > .image-frame, .box-content .center {
+  display: block;
+}
+
+.box-content .title {
+  text-align: center;
+  border-bottom: none;
+  width: 100%;
+}
+
+.page > div.short, .page > .title {
+  display: none;
+}
+
+p.left-text {
+  width: calc(50% - 1rem);
+  display: inline-block;
+}
+
+img.medium-image {
+  width: 4rem !important;
+}
+
+.image-frame {
+  text-align: center;
+  display: block;
+  background-color: rgb(243 244 246);
+  padding: .5rem;
+  border-radius: .3rem;
+  border: solid 2px #e5e7eb;
+}
+
+.center {
+  text-align: center !important;
+}
+
+.box-content > .title {
+  display: none;
+}
+
+.navbar .right {
+  position: fixed;
+  right: 1rem;
+  top: 0.7rem;
+}
+
+.navbar .right > * {
+  margin-left: 1.5rem;
 }
