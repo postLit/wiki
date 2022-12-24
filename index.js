@@ -54,6 +54,14 @@ function getPageData(file, part) {
   }
 }
 
+app.get("/css/:file", function(req, res) {
+  res.sendFile(path.join(__dirname, "/css/"+req.params.file))
+})
+
+app.get("/images/:file", function(req, res) {
+  res.sendFile(path.join(__dirname, "/images/"+req.params.file))
+})
+
 app.get("/", async function(req, res) {
     res.sendRenderedFile("/html/main.html", {
       text: getPageData("/pages/postlit-dev.html"),
